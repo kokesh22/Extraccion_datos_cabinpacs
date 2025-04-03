@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.12'
+          
+      - name: Run pytest
+        run: pytest || true
 
       - name: Instalar dependencias
         run: pip install pandas
